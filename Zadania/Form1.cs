@@ -82,7 +82,7 @@ namespace Zadania
                     txtT3_2.Text += _MyNumbers[i].ToString() + Environment.NewLine;
                 }
                 StopWatch.Stop();
-                txtT3_2.Text = "filled in: " + StopWatch.Get + txtT3_2.Text;
+                txtT3_2.Text = "filled in textbox: " + StopWatch.Get + txtT3_2.Text;
             }
         }
 
@@ -104,7 +104,7 @@ namespace Zadania
                     txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
                 }
                 StopWatch.Stop();
-                txtT3_wynik.Text += "Test sort, " + StopWatch.Get;
+                txtT3_wynik.Text = "Test sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
             }
         }
 
@@ -126,7 +126,7 @@ namespace Zadania
                     txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
                 }
                 StopWatch.Stop();
-                txtT3_wynik.Text += "Bubble sort, " + StopWatch.Get;
+                txtT3_wynik.Text = "Bubble sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
             }
         }
 
@@ -148,7 +148,7 @@ namespace Zadania
                     txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
                 }
                 StopWatch.Stop();
-                txtT3_wynik.Text += "Quick sort, " + StopWatch.Get;
+                txtT3_wynik.Text = "Quick sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
             }
         }
     }
