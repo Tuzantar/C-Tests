@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Zadania.Zadania;
 
 namespace Zadania
@@ -62,8 +63,7 @@ namespace Zadania
 
         private void btnT3_Click(object sender, EventArgs e)
         {
-            txtT3_2.Text = "";
-            txtT3_wynik.Text = "";
+            _MyNumbers.Clear();
             int Number;
             Random r = new Random();
             int.TryParse(txtT3_1.Text, out Number);
@@ -73,83 +73,57 @@ namespace Zadania
                 _MyNumbers.Add(r.Next(100000,999999));
             }
             StopWatch.Stop();
-            txtT3_2.Text = "Generated in: " + StopWatch.Get + txtT3_2.Text;
-            if (_MyNumbers.Count < 5000)
-            {
-                StopWatch.Start();
-                for (int i = 0; i < _MyNumbers.Count; i++)
-                {
-                    txtT3_2.Text += _MyNumbers[i].ToString() + Environment.NewLine;
-                }
-                StopWatch.Stop();
-                txtT3_2.Text = "filled in textbox: " + StopWatch.Get + txtT3_2.Text;
-            }
-        }
+            string opis = "Generated in: " + StopWatch.Get + Environment.NewLine;
+            AddTextToTextboxWithStringBuilder(_MyNumbers, txtT3_2, opis);
+    }
 
         private void btnTS_Click(object sender, EventArgs e)
         {
-            txtT3_wynik.Text += "Test sort (with 2 stacks)" + Environment.NewLine;
+            string opis = "Test sort (with 2 stacks)" + Environment.NewLine;
             List<Int64> SortNumbers = new List<Int64>(_MyNumbers);
             var StopWatch = new StopWatch();
             var TestSort = new TestSort(SortNumbers);
             TestSort.Sort();
             StopWatch.Stop();
-            txtT3_wynik.Text += "Generated in: " + StopWatch.Get;
+            opis += "Generated in: " + StopWatch.Get;
             SortNumbers = TestSort.Get;
-            if (SortNumbers.Count < 5000)
-            {
-                StopWatch.Start();
-                for (int i = 0; i < SortNumbers.Count; i++)
-                {
-                    txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
-                }
-                StopWatch.Stop();
-                txtT3_wynik.Text = "Test sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
-            }
+            AddTextToTextboxWithStringBuilder(SortNumbers, txtT3_wynik, opis);
         }
 
         private void bttn_bb_Click(object sender, EventArgs e)
         {
-            txtT3_wynik.Text += "Bubble sort" + Environment.NewLine;
+            string opis = "Bubble sort" + Environment.NewLine;
             List<Int64> SortNumbers = new List<Int64>(_MyNumbers);
             var StopWatch = new StopWatch();
             var BubbleSort = new BubbleSort(SortNumbers);
             BubbleSort.Sort();
             StopWatch.Stop();
-            txtT3_wynik.Text += "Generated in: " + StopWatch.Get;
+            opis += "Generated in: " + StopWatch.Get;
             SortNumbers = BubbleSort.Get;
-            if (SortNumbers.Count < 5000)
-            {
-                StopWatch.Start();
-                for (int i = 0; i < SortNumbers.Count; i++)
-                {
-                    txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
-                }
-                StopWatch.Stop();
-                txtT3_wynik.Text = "Bubble sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
-            }
+            AddTextToTextboxWithStringBuilder(SortNumbers, txtT3_wynik, opis);
         }
 
         private void btn_T3_QS_Click(object sender, EventArgs e)
         {
-            txtT3_wynik.Text += "Quick sort" + Environment.NewLine;
+            string opis = "Quick sort" + Environment.NewLine;
             List<Int64> SortNumbers = new List<Int64>(_MyNumbers);
             var StopWatch = new StopWatch();
             var QuickSort = new QuickSort(SortNumbers);
             QuickSort.Sort();
             StopWatch.Stop();
-            txtT3_wynik.Text += "Generated in: " + StopWatch.Get;
+            opis += "Generated in: " + StopWatch.Get;
             SortNumbers = QuickSort.Get;
-            if (SortNumbers.Count < 5000)
-            {
-                StopWatch.Start();
-                for (int i = 0; i < SortNumbers.Count; i++)
-                {
-                    txtT3_wynik.Text += SortNumbers[i].ToString() + Environment.NewLine;
-                }
-                StopWatch.Stop();
-                txtT3_wynik.Text = "Quick sort, filled in textbox " + StopWatch.Get + txtT3_wynik.Text;
-            }
+            AddTextToTextboxWithStringBuilder(SortNumbers, txtT3_wynik, opis);
+        }
+        private void AddTextToTextboxWithStringBuilder(List<Int64> list, TextBox txbx, string opis)
+        {
+            var StopWatch = new StopWatch();
+            var RStringBuilder = new RStringBuilder(list);
+            RStringBuilder.TStr();
+            string Rtext = RStringBuilder.Get;
+            txbx.Text = Rtext;
+            StopWatch.Stop();
+            txbx.Text = opis + "filled in textbox with stringBuilder: " + StopWatch.Get + Environment.NewLine + txbx.Text;
         }
     }
 }

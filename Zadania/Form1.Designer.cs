@@ -40,13 +40,13 @@
             this.txt_T2a = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_T3_QS = new System.Windows.Forms.Button();
             this.btnTS = new System.Windows.Forms.Button();
             this.bttn_bb = new System.Windows.Forms.Button();
             this.txtT3_wynik = new System.Windows.Forms.TextBox();
             this.btnT3 = new System.Windows.Forms.Button();
             this.txtT3_2 = new System.Windows.Forms.TextBox();
             this.txtT3_1 = new System.Windows.Forms.TextBox();
-            this.btn_T3_QS = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Z.SuspendLayout();
@@ -100,7 +100,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(922, 553);
+            this.tabControl1.Size = new System.Drawing.Size(938, 553);
             this.tabControl1.TabIndex = 4;
             // 
             // Z
@@ -179,16 +179,26 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(914, 520);
+            this.tabPage1.Size = new System.Drawing.Size(930, 520);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Sortowanie";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btn_T3_QS
+            // 
+            this.btn_T3_QS.Location = new System.Drawing.Point(402, 143);
+            this.btn_T3_QS.Name = "btn_T3_QS";
+            this.btn_T3_QS.Size = new System.Drawing.Size(125, 29);
+            this.btn_T3_QS.TabIndex = 6;
+            this.btn_T3_QS.Text = "Quick S";
+            this.btn_T3_QS.UseVisualStyleBackColor = true;
+            this.btn_T3_QS.Click += new System.EventHandler(this.btn_T3_QS_Click);
+            // 
             // btnTS
             // 
-            this.btnTS.Location = new System.Drawing.Point(137, 41);
+            this.btnTS.Location = new System.Drawing.Point(402, 73);
             this.btnTS.Name = "btnTS";
-            this.btnTS.Size = new System.Drawing.Size(94, 29);
+            this.btnTS.Size = new System.Drawing.Size(125, 29);
             this.btnTS.TabIndex = 5;
             this.btnTS.Text = "Test S";
             this.btnTS.UseVisualStyleBackColor = true;
@@ -196,9 +206,9 @@
             // 
             // bttn_bb
             // 
-            this.bttn_bb.Location = new System.Drawing.Point(137, 76);
+            this.bttn_bb.Location = new System.Drawing.Point(402, 108);
             this.bttn_bb.Name = "bttn_bb";
-            this.bttn_bb.Size = new System.Drawing.Size(94, 29);
+            this.bttn_bb.Size = new System.Drawing.Size(125, 29);
             this.bttn_bb.TabIndex = 4;
             this.bttn_bb.Text = "Bubble S";
             this.bttn_bb.UseVisualStyleBackColor = true;
@@ -206,18 +216,18 @@
             // 
             // txtT3_wynik
             // 
-            this.txtT3_wynik.Location = new System.Drawing.Point(237, 6);
+            this.txtT3_wynik.Location = new System.Drawing.Point(533, 6);
             this.txtT3_wynik.Multiline = true;
             this.txtT3_wynik.Name = "txtT3_wynik";
             this.txtT3_wynik.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtT3_wynik.Size = new System.Drawing.Size(671, 508);
+            this.txtT3_wynik.Size = new System.Drawing.Size(390, 508);
             this.txtT3_wynik.TabIndex = 3;
             // 
             // btnT3
             // 
-            this.btnT3.Location = new System.Drawing.Point(137, 6);
+            this.btnT3.Location = new System.Drawing.Point(402, 38);
             this.btnT3.Name = "btnT3";
-            this.btnT3.Size = new System.Drawing.Size(94, 29);
+            this.btnT3.Size = new System.Drawing.Size(125, 29);
             this.btnT3.TabIndex = 2;
             this.btnT3.Text = "Generate";
             this.btnT3.UseVisualStyleBackColor = true;
@@ -225,37 +235,27 @@
             // 
             // txtT3_2
             // 
-            this.txtT3_2.Location = new System.Drawing.Point(6, 39);
+            this.txtT3_2.Location = new System.Drawing.Point(6, 6);
             this.txtT3_2.Multiline = true;
             this.txtT3_2.Name = "txtT3_2";
             this.txtT3_2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtT3_2.Size = new System.Drawing.Size(125, 475);
+            this.txtT3_2.Size = new System.Drawing.Size(390, 508);
             this.txtT3_2.TabIndex = 1;
             // 
             // txtT3_1
             // 
-            this.txtT3_1.Location = new System.Drawing.Point(6, 6);
+            this.txtT3_1.Location = new System.Drawing.Point(402, 6);
             this.txtT3_1.Name = "txtT3_1";
             this.txtT3_1.Size = new System.Drawing.Size(125, 27);
             this.txtT3_1.TabIndex = 0;
             this.txtT3_1.Text = "2000";
             this.txtT3_1.TextChanged += new System.EventHandler(this.txtT3_1_TextChanged);
             // 
-            // btn_T3_QS
-            // 
-            this.btn_T3_QS.Location = new System.Drawing.Point(137, 111);
-            this.btn_T3_QS.Name = "btn_T3_QS";
-            this.btn_T3_QS.Size = new System.Drawing.Size(94, 29);
-            this.btn_T3_QS.TabIndex = 6;
-            this.btn_T3_QS.Text = "Quick S";
-            this.btn_T3_QS.UseVisualStyleBackColor = true;
-            this.btn_T3_QS.Click += new System.EventHandler(this.btn_T3_QS_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 577);
+            this.ClientSize = new System.Drawing.Size(963, 577);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
