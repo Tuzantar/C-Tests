@@ -27,7 +27,7 @@ namespace Zadania.Zadania
                 Cur = 0;
                 for (int j = 0; j < _TSNumbers.Count; j++)
                 {
-                    if (Number < _TSNumbers[j])
+                    if (Number > _TSNumbers[j])
                     {
                         Number = _TSNumbers[j];
                         Cur = j;
